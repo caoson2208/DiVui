@@ -1,1 +1,1 @@
-**A project using the automation tool, [Selenim(C#)](https://www.selenium.dev/)**
+**A project using the automation tool, [Selenium(C#)](https://www.selenium.dev/)**
