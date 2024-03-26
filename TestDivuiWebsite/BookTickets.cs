@@ -55,7 +55,7 @@ namespace TestDivuiWebsite
             IWebElement finishBookingButton = driver.FindElement(By.Id("checkoutbtn"));
             finishBookingButton.Click();
 
-            Thread.Sleep(10000);
+            Thread.Sleep(2000);
         }
 
         [TestCleanup]
