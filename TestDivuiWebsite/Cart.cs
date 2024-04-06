@@ -48,11 +48,7 @@ namespace TestDivuiWebsite
             IWebElement dropdownCity = driver.FindElement(By.Id("cityId"));
             dropdownCity.Click();
             SelectElement selectCity = new SelectElement(dropdownCity);
-            selectCity.SelectByIndex(2);
-            Thread.Sleep(1000);
-
-            IWebElement category = driver.FindElement(By.XPath("//*[@id=\"collapseFilters\"]/div[2]/div[2]/ul/li"));
-            category.Click();
+            selectCity.SelectByIndex(1);
             Thread.Sleep(1000);
 
             IWebElement productCart = driver.FindElement(By.XPath("//article[1]/a"));
@@ -70,30 +66,19 @@ namespace TestDivuiWebsite
             checkPrice.Click();
             Thread.Sleep(1000);
 
-            IWebElement dropdownQuantityAdult = driver.FindElement(By.Id("addtocart_12220_EnteredQuantity"));
-            dropdownQuantityAdult.Click();
-            SelectElement selectQuantityAdult = new SelectElement(dropdownQuantityAdult);
-            selectQuantityAdult.SelectByIndex(2);
+            IWebElement dropdownQuantity = driver.FindElement(By.Id("addtocart_20237_EnteredQuantity"));
+            dropdownQuantity.Click();
+            SelectElement selectQuantity = new SelectElement(dropdownQuantity);
+            selectQuantity.SelectByIndex(2);
             Thread.Sleep(1000);
 
-            IWebElement dropdownQuantityChildren = driver.FindElement(By.Id("addtocart_12221_EnteredQuantity"));
-            dropdownQuantityChildren.Click();
-            SelectElement selectQuantityChildren = new SelectElement(dropdownQuantityChildren);
-            selectQuantityChildren.SelectByIndex(3);
+            IWebElement dropdownSampling = driver.FindElement(By.Id("product_attribute_17860"));
+            dropdownSampling.Click();
+            SelectElement selectSampling = new SelectElement(dropdownSampling);
+            selectSampling.SelectByIndex(2);
             Thread.Sleep(1000);
 
-            IWebElement dropdownQuantityElderly = driver.FindElement(By.Id("addtocart_12222_EnteredQuantity"));
-            dropdownQuantityElderly.Click();
-            SelectElement selectQuantityElderly = new SelectElement(dropdownQuantityElderly);
-            selectQuantityElderly.SelectByIndex(3);
-            Thread.Sleep(1000);
-
-            IWebElement time = driver.FindElement(By.Id("product_attribute_8053"));
-            time.Clear();
-            time.SendKeys("7");
-            Thread.Sleep(1000);
-
-            IWebElement btnOrderOnl2 = driver.FindElement(By.Id("addtocartproduct-option-3763"));
+            IWebElement btnOrderOnl2 = driver.FindElement(By.Id("addtocartproduct-option-7718"));
             btnOrderOnl2.Click();
             Thread.Sleep(2000);
         }

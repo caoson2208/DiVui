@@ -175,6 +175,62 @@ namespace TestDivuiWebsite
             Thread.Sleep(2000);
         }
 
+        [TestMethod]
+        public void CheckEmpty()
+        {
+            IWebElement userRegister = driver.FindElement(By.XPath("//a[@href='/register']"));
+            userRegister.Click();
+            Thread.Sleep(500);
+
+            IWebElement firstnameDropdown = driver.FindElement(By.Id("FirstName"));
+            firstnameDropdown.Click();
+            SelectElement firstNameSelect = new SelectElement(firstnameDropdown);
+            firstNameSelect.SelectByText("Bà");
+            Thread.Sleep(500);
+
+            IWebElement lastnameInput = driver.FindElement(By.Id("LastName"));
+            lastnameInput.Clear();
+            Thread.Sleep(500);
+
+            IWebElement emailInput = driver.FindElement(By.Id("Email"));
+            emailInput.Clear();
+            Thread.Sleep(1000);
+
+            IWebElement passwordInput = driver.FindElement(By.Id("Password"));
+            passwordInput.Clear();
+
+            IWebElement confirmpasswordInput = driver.FindElement(By.Id("ConfirmPassword"));
+            confirmpasswordInput.Clear();
+
+            IWebElement newsletter = driver.FindElement(By.Id("Newsletter"));
+            if (!newsletter.Selected)
+                newsletter.Click();
+
+            IWebElement btnRegister = driver.FindElement(By.XPath("//button[contains(text(), 'Đăng ký')]"));
+            btnRegister.Click();
+
+            IWebElement errorMessageLastName = driver.FindElement(By.CssSelector("form.login-data > div:nth-child(4) > span"));
+            Assert.IsNotNull(errorMessageLastName, "Error message element not found. Register failed.");
+            Assert.AreEqual("Vui lòng nhập họ và tên", errorMessageLastName.Text,
+                "The error message does not match the expected message.");
+
+            IWebElement errorMessageEmail = driver.FindElement(By.CssSelector("form.login-data > div:nth-child(5) > span > span"));
+            Assert.IsNotNull(errorMessageEmail, "Error message element not found. Register failed.");
+            Assert.AreEqual("Vui lòng nhập email", errorMessageEmail.Text,
+                "The error message does not match the expected message.");
+
+            IWebElement errorMessagePassowrd = driver.FindElement(By.CssSelector("form.login-data > div:nth-child(6) > span > span"));
+            Assert.IsNotNull(errorMessagePassowrd, "Error message element not found. Register failed.");
+            Assert.AreEqual("Vui lòng nhập mật khẩu", errorMessagePassowrd.Text,
+                "The error message does not match the expected message.");
+
+            IWebElement errorMessageConfirmPassowrd = driver.FindElement(By.CssSelector("form.login-data > div:nth-child(7) > span > span"));
+            Assert.IsNotNull(errorMessageConfirmPassowrd, "Error message element not found. Register failed.");
+            Assert.AreEqual("Vui lòng nhập mật khẩu", errorMessageConfirmPassowrd.Text,
+                "The error message does not match the expected message.");
+            Thread.Sleep(2000);
+        }
+
         [TestCleanup]
         public void TearDown()
         {
