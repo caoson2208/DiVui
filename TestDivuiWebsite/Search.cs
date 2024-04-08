@@ -49,6 +49,27 @@ namespace TestDivuiWebsite
 
         }
 
+        [TestMethod]
+        public void checkTextFail()
+        {
+            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearch.Click();
+            Thread.Sleep(1000);
+
+            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
+            searchInput.Clear();
+            searchInput.SendKeys("A@!#*123d");
+            Thread.Sleep(1000);
+
+            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
+            btnInput.Click();
+            Thread.Sleep(5000);
+
+            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNotNull(result, "Element message not found. Testcase fail");
+            Assert.AreEqual(result.Text, "No results for your search");
+
+        }
 
         [TestMethod]
         public void checkTextSuccess()
@@ -71,8 +92,7 @@ namespace TestDivuiWebsite
 
         }
 
-        [TestMethod]
-        public void checkTextFail()
+        public void checkNumberSuccess()
         {
             IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
             btnSearch.Click();
@@ -80,16 +100,15 @@ namespace TestDivuiWebsite
 
             IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
             searchInput.Clear();
-            searchInput.SendKeys("AbDsd");
+            searchInput.SendKeys("Biển");
             Thread.Sleep(1000);
 
             IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
             btnInput.Click();
             Thread.Sleep(5000);
 
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNotNull(result, "Element message not found. Testcase fail");
-            Assert.AreEqual(result.Text, "No results for your search");
+            IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
+            Assert.IsNotNull(blogs);
 
         }
 
@@ -113,26 +132,7 @@ namespace TestDivuiWebsite
             Assert.IsNotNull(blogs);
         }
 
-        [TestMethod]
-        public void checkSpecialFail()
-        {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
-            Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("@!~");
-            Thread.Sleep(1000);
-
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
-            Thread.Sleep(5000);
-
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNotNull(result, "Element message not found. Testcase fail");
-            Assert.AreEqual(result.Text, "No results for your search");
-        }
 
         [TestCleanup]
         public void TearDown()
