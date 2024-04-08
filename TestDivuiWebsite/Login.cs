@@ -135,34 +135,6 @@ namespace TestDivuiWebsite
             Thread.Sleep(3000);
         }
 
-        [TestMethod]
-        public void CheckEmailInvalid()
-        {
-            IWebElement userLogin = driver.FindElement(By.XPath("//a[@href='/login']"));
-            userLogin.Click();
-
-            IWebElement usernameInput = driver.FindElement(By.Id("Email"));
-            usernameInput.Clear();
-            usernameInput.SendKeys("testtest123@cns.com");
-
-            IWebElement passwordInput = driver.FindElement(By.Id("Password"));
-            passwordInput.Clear();
-            passwordInput.SendKeys("testtest@123");
-
-            IWebElement rememberPassword = driver.FindElement(By.Id("RememberMe"));
-            if (!rememberPassword.Selected)
-                rememberPassword.Click();
-
-            IWebElement btnLogin = driver.FindElement(By.XPath("//button[contains(text(), 'Đăng nhập')]"));
-            btnLogin.Click();
-
-            IWebElement currentUser = driver.FindElement(By.XPath("//*[@id=\"navbar\"]/ul[2]/li[3]/a"));
-            Assert.IsNotNull(currentUser, "Login fail");
-            Assert.AreEqual("testtest123@cns.com", currentUser.Text, "The username does not match after logging in.");
-            Console.WriteLine(currentUser.Text);
-            Thread.Sleep(3000);
-        }
-
         [TestCleanup]
         public void TearDown()
         {

@@ -27,7 +27,7 @@ namespace TestDivuiWebsite
         }
 
         [TestMethod]
-        public void BookTicketSucces()
+        public void BookTicketSuccess()
         {
             IWebElement userCart = driver.FindElement(By.XPath("//a[@href='/cart']"));
             userCart.Click();
@@ -43,10 +43,19 @@ namespace TestDivuiWebsite
             nameSelect.SelectByIndex(0);
             Thread.Sleep(1000);
 
+            IWebElement fullname = driver.FindElement(By.Id("BillingAddress_NewAddress_FullName"));
+            fullname.Clear();
+            fullname.SendKeys("testtest");
+            Thread.Sleep(1000);
+
             IWebElement phoneNumber = driver.FindElement(By.Id("BillingAddress_NewAddress_PhoneNumber"));
             phoneNumber.Clear();
             phoneNumber.SendKeys("0123456789");
             Thread.Sleep(1000);
+
+            IWebElement emailInput = driver.FindElement(By.Id("BillingAddress_NewAddress_Email"));
+            emailInput.Clear();
+            emailInput.SendKeys("testtest@yopmail.com");
 
             IWebElement shippingAddress = driver.FindElement(By.Id("product_attribute_17862"));
             shippingAddress.Clear();
@@ -71,7 +80,7 @@ namespace TestDivuiWebsite
         }
 
         [TestMethod]
-        public void CheckEmpty()
+        public void CheckEmptyCustomerInformation()
         {
             IWebElement userCart = driver.FindElement(By.XPath("//a[@href='/cart']"));
             userCart.Click();
@@ -87,9 +96,9 @@ namespace TestDivuiWebsite
             nameSelect.SelectByIndex(0);
             Thread.Sleep(1000);
 
-            IWebElement lastnameInput = driver.FindElement(By.Id("BillingAddress_NewAddress_FullName"));
-            lastnameInput.Clear();
-            Thread.Sleep(500);
+            IWebElement fullname = driver.FindElement(By.Id("BillingAddress_NewAddress_FullName"));
+            fullname.Clear();
+            Thread.Sleep(1000);
 
             IWebElement phoneNumber = driver.FindElement(By.Id("BillingAddress_NewAddress_PhoneNumber"));
             phoneNumber.Clear();
@@ -114,13 +123,61 @@ namespace TestDivuiWebsite
             Assert.IsNotNull(nameErrorMessage, "Error message element not found. Book Ticket failed.");
             Assert.AreEqual("Vui lòng nhập họ và tên", nameErrorMessage.Text, "Error message is incorrect.");
 
-            IWebElement phoneErrorMessage = driver.FindElement(By.XPath("//*[@id=\"billing-new-address-form\"]/div[2]/div[2]/span/span"));
+            IWebElement phoneErrorMessage = driver.FindElement(By.XPath("//*[@id=\"billing-new-address-form\"]/div[3]/div[2]/span/span"));
             Assert.IsNotNull(phoneErrorMessage, "Error message element not found. Book Ticket failed.");
-            Assert.AreEqual("Vui lòng nhập họ và tên", phoneErrorMessage.Text, "Error message is incorrect.");
+            Assert.AreEqual("Vui lòng nhập số điện thoại", phoneErrorMessage.Text, "Error message is incorrect.");
 
             IWebElement emailErrorMessage = driver.FindElement(By.XPath("//*[@id=\"billing-new-address-form\"]/div[4]/div[2]/span"));
             Assert.IsNotNull(emailErrorMessage, "Error message element not found. Book Ticket failed.");
             Assert.AreEqual("Vui lòng nhập địa chỉ email.", emailErrorMessage.Text, "Error message is incorrect.");
+        }
+
+        [TestMethod]
+        public void CheckEmptyDeliveryAddress()
+        {
+            IWebElement userCart = driver.FindElement(By.XPath("//a[@href='/cart']"));
+            userCart.Click();
+            Thread.Sleep(1000);
+
+            IWebElement btnContinue = driver.FindElement(By.Id("checkout"));
+            btnContinue.Click();
+            Thread.Sleep(1000);
+
+            IWebElement nameDropdown = driver.FindElement(By.Id("BillingAddress_NewAddress_Title"));
+            nameDropdown.Click();
+            SelectElement nameSelect = new SelectElement(nameDropdown);
+            nameSelect.SelectByIndex(0);
+            Thread.Sleep(1000);
+
+            IWebElement fullname = driver.FindElement(By.Id("BillingAddress_NewAddress_FullName"));
+            fullname.Clear();
+            fullname.SendKeys("testtest");
+            Thread.Sleep(1000);
+
+            IWebElement phoneNumber = driver.FindElement(By.Id("BillingAddress_NewAddress_PhoneNumber"));
+            phoneNumber.Clear();
+            phoneNumber.SendKeys("0123456789");
+            Thread.Sleep(1000);
+
+            IWebElement emailInput = driver.FindElement(By.Id("BillingAddress_NewAddress_Email"));
+            emailInput.Clear();
+            emailInput.SendKeys("testtest@yopmail.com");
+
+            IWebElement shippingAddress = driver.FindElement(By.Id("product_attribute_17862"));
+            shippingAddress.Clear();
+            Thread.Sleep(1000);
+
+            IWebElement paymentType = driver.FindElement(By.XPath("//a[@href='#collapse_1']"));
+            paymentType.Click();
+            Thread.Sleep(1000);
+
+            IWebElement btnFinishBooking = driver.FindElement(By.Id("checkoutbtn"));
+            btnFinishBooking.Click();
+            Thread.Sleep(2000);
+
+            IWebElement addressErrorMessage = driver.FindElement(By.CssSelector("#product_attribute_input_17862 > div"));
+            Assert.IsNotNull(addressErrorMessage, "Error message element not found. Book Ticket failed.");
+            Assert.AreEqual("Vui lòng nhập địa chỉ giao hàng", addressErrorMessage.Text, "Error message is incorrect.");
         }
 
         [TestCleanup]
