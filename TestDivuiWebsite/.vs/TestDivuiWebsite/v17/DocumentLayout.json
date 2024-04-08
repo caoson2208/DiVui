@@ -1,0 +1,122 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Search.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Logout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Logout.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:packages.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Register.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "packages.config",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\packages.config",
+              "RelativeDocumentMoniker": "packages.config",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\packages.config",
+              "RelativeToolTip": "packages.config",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2024-04-08T12:32:51.24Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Register.cs",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Register.cs",
+              "RelativeDocumentMoniker": "Register.cs",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Register.cs",
+              "RelativeToolTip": "Register.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:32:28.86Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Search.cs",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Search.cs",
+              "RelativeDocumentMoniker": "Search.cs",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Search.cs",
+              "RelativeToolTip": "Search.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAPAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:30:05.274Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Logout.cs",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Logout.cs",
+              "RelativeDocumentMoniker": "Logout.cs",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Logout.cs",
+              "RelativeToolTip": "Logout.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:30:02.006Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Cart.cs",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Cart.cs",
+              "RelativeDocumentMoniker": "Cart.cs",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Cart.cs",
+              "RelativeToolTip": "Cart.cs",
+              "ViewState": "AQIAAE4AAAAAAAAAAAAAACoAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:29:54.649Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Login.cs",
+              "DocumentMoniker": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Login.cs",
+              "RelativeDocumentMoniker": "Login.cs",
+              "ToolTip": "D:\\University\\N\u0103m 3\\H\u1ECDc k\u1EF3 2\\Ki\u1EC3m th\u1EED ph\u1EA7n m\u1EC1m\\TestDivuiWebsite\\TestDivuiWebsite\\Login.cs",
+              "RelativeToolTip": "Login.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T12:29:50.969Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
