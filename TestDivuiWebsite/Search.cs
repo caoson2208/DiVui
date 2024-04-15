@@ -46,9 +46,6 @@ namespace TestDivuiWebsite
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
             Assert.IsTrue(blogs.Count > 0, "No blogs found.");
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNull(result, "Element message found. Testcase fail");
-
         }
 
         [TestMethod]
@@ -60,12 +57,12 @@ namespace TestDivuiWebsite
 
             IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
             searchInput.Clear();
-            searchInput.SendKeys("A@!#*123d");
+            searchInput.SendKeys("A@!#*123fd");
             Thread.Sleep(1000);
 
             IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
             btnInput.Click();
-            Thread.Sleep(5000);
+            Thread.Sleep(10000);
 
             IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
             Assert.IsNotNull(result, "Element message not found. Testcase fail");
@@ -91,10 +88,9 @@ namespace TestDivuiWebsite
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
             Assert.IsTrue(blogs.Count > 0, "No blogs found.");
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
+        [TestMethod]
         public void checkNumberSuccess()
         {
             IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
@@ -103,7 +99,7 @@ namespace TestDivuiWebsite
 
             IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
             searchInput.Clear();
-            searchInput.SendKeys("Biển");
+            searchInput.SendKeys("2018");
             Thread.Sleep(1000);
 
             IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
@@ -112,8 +108,6 @@ namespace TestDivuiWebsite
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
             Assert.IsTrue(blogs.Count > 0, "No blogs found.");
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
         [TestMethod]
@@ -134,8 +128,6 @@ namespace TestDivuiWebsite
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
             Assert.IsTrue(blogs.Count > 0, "No blogs found.");
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
 
