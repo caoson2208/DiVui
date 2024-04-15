@@ -45,7 +45,9 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsNotNull(blogs);
+            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNull(result, "Element message found. Testcase fail");
 
         }
 
@@ -88,8 +90,9 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsNotNull(blogs);
-
+            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
         public void checkNumberSuccess()
@@ -108,8 +111,9 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsNotNull(blogs);
-
+            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
         [TestMethod]
@@ -129,7 +133,9 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsNotNull(blogs);
+            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNull(result, "Element message found. Testcase fail");
         }
 
 
