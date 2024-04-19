@@ -18,75 +18,75 @@ namespace TestDivuiWebsite
     public class Cart
     {
        
-        private static IWebDriver driver;
-        private Login login = new Login();
+        private static IWebDriver driver_58_Son;
+        private Login login_58_Son = new Login();
 
         [TestInitialize]
         public void SetUp()
         {
-            login.SetUp();
-            driver = login.GetDriver();
-            login.LoginSuccess();
+            login_58_Son.SetUp();
+            driver_58_Son = login_58_Son.GetDriver();
+            login_58_Son.LoginSuccess();
         }
 
         [TestMethod]
         public void AddToCartSuccess()
         {
-            IWebElement searchLocation = driver.FindElement(By.XPath("//*[@id=\"small-search-box-form\"]/button/i"));
-            searchLocation.Click();
+            IWebElement searchLocation_58_Son = driver_58_Son.FindElement(By.XPath("//*[@id=\"small-search-box-form\"]/button/i"));
+            searchLocation_58_Son.Click();
             Thread.Sleep(1000);
 
-            IWebElement nameCity = driver.FindElement(By.XPath("//a[contains(text(), 'Hồ Chí Minh')]"));
-            nameCity.Click();
+            IWebElement nameCity_58_Son = driver_58_Son.FindElement(By.XPath("//a[contains(text(), 'Hồ Chí Minh')]"));
+            nameCity_58_Son.Click();
 
-            IWebElement dropdownCountry = driver.FindElement(By.Id("countryId"));
-            dropdownCountry.Click();
-            SelectElement selectCountry = new SelectElement(dropdownCountry);
-            selectCountry.SelectByIndex(1);
+            IWebElement dropdownCountry_58_Son = driver_58_Son.FindElement(By.Id("countryId"));
+            dropdownCountry_58_Son.Click();
+            SelectElement selectCountry_58_Son = new SelectElement(dropdownCountry_58_Son);
+            selectCountry_58_Son.SelectByIndex(1);
             Thread.Sleep(1000);
 
-            IWebElement dropdownCity = driver.FindElement(By.Id("cityId"));
-            dropdownCity.Click();
-            SelectElement selectCity = new SelectElement(dropdownCity);
-            selectCity.SelectByIndex(1);
+            IWebElement dropdownCity_58_Son = driver_58_Son.FindElement(By.Id("cityId"));
+            dropdownCity_58_Son.Click();
+            SelectElement selectCity_58_Son = new SelectElement(dropdownCity_58_Son);
+            selectCity_58_Son.SelectByIndex(1);
             Thread.Sleep(1000);
 
-            IWebElement productCart = driver.FindElement(By.XPath("//article[1]/a"));
-            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("arguments[0].removeAttribute('target');", productCart);
+            IWebElement productCart_58_Son = driver_58_Son.FindElement(By.XPath("//article[1]/a"));
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver_58_Son;
+            js.ExecuteScript("arguments[0].removeAttribute('target');", productCart_58_Son);
             Thread.Sleep(1000);
-            productCart.Click();
-            Thread.Sleep(1000);
-
-            IWebElement btnOrderOnl = driver.FindElement(By.XPath("//div[3]/a"));
-            btnOrderOnl.Click();
+            productCart_58_Son.Click();
             Thread.Sleep(1000);
 
-            IWebElement checkPrice = driver.FindElement(By.Id("btncheckprice"));
-            checkPrice.Click();
+            IWebElement btnOrderOnl_58_Son = driver_58_Son.FindElement(By.XPath("//div[3]/a"));
+            btnOrderOnl_58_Son.Click();
             Thread.Sleep(1000);
 
-            IWebElement dropdownQuantity = driver.FindElement(By.Id("addtocart_20237_EnteredQuantity"));
-            dropdownQuantity.Click();
-            SelectElement selectQuantity = new SelectElement(dropdownQuantity);
-            selectQuantity.SelectByIndex(2);
+            IWebElement checkPrice_58_Son = driver_58_Son.FindElement(By.Id("btncheckprice"));
+            checkPrice_58_Son.Click();
             Thread.Sleep(1000);
 
-            IWebElement dropdownSampling = driver.FindElement(By.Id("product_attribute_17860"));
-            dropdownSampling.Click();
-            SelectElement selectSampling = new SelectElement(dropdownSampling);
-            selectSampling.SelectByIndex(2);
+            IWebElement dropdownQuantity_58_Son = driver_58_Son.FindElement(By.Id("addtocart_20237_EnteredQuantity"));
+            dropdownQuantity_58_Son.Click();
+            SelectElement selectQuantity_58_Son = new SelectElement(dropdownQuantity_58_Son);
+            selectQuantity_58_Son.SelectByIndex(2);
             Thread.Sleep(1000);
 
-            IWebElement btnOrderOnl2 = driver.FindElement(By.Id("addtocartproduct-option-7718"));
-            btnOrderOnl2.Click();
+            IWebElement dropdownSampling_58_Son = driver_58_Son.FindElement(By.Id("product_attribute_17860"));
+            dropdownSampling_58_Son.Click();
+            SelectElement selectSampling_58_Son = new SelectElement(dropdownSampling_58_Son);
+            selectSampling_58_Son.SelectByIndex(2);
+            Thread.Sleep(1000);
+
+            IWebElement btnOrderOnl2_58_Son = driver_58_Son.FindElement(By.Id("addtocartproduct-option-7718"));
+            btnOrderOnl2_58_Son.Click();
             Thread.Sleep(2000);
         }
 
         [TestCleanup]
         public void TearDown()
         {
-            driver.Quit();
+            driver_58_Son.Quit();
         }
     }
 }

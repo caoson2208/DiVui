@@ -121,7 +121,7 @@ namespace TestDivuiWebsite
             Thread.Sleep(1000);
             IWebElement submitBtn = driver.FindElement(By.CssSelector("input[type=submit]"));
             submitBtn.Click();
-
+            Thread.Sleep(1000);
             IWebElement erorr = driver.FindElement(By.CssSelector("span.field-validation-error>span"));
             Assert.IsNotNull(erorr, "Error message not found, Test Case fail ");
         }

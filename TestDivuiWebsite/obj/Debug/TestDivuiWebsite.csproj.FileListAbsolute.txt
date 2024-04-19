@@ -17,8 +17,8 @@ D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\Tes
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\bin\Debug\WebDriver.xml
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivuiWebsite.csproj.AssemblyReference.cache
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivuiWebsite.csproj.CoreCompileInputs.cache
-D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivu.2C1D2EE1.Up2Date
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivuiWebsite.dll
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivuiWebsite.pdb
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\bin\Debug\WebDriver.Support.dll
 D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\bin\Debug\WebDriver.Support.xml
+D:\University\Năm 3\Học kỳ 2\Kiểm thử phần mềm\TestDivuiWebsite\TestDivuiWebsite\obj\Debug\TestDivuiWebsite.csproj.CopyComplete
