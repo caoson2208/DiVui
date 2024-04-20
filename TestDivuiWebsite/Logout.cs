@@ -18,6 +18,7 @@ namespace TestDivuiWebsite
         [TestInitialize]
         public void SetUp()
         {
+            // Gọi phương thức SetUp, GetDriver và LoginSuccess của lớp Login 
             login_58_Son.SetUp();
             driver_58_Son = login_58_Son.GetDriver();
             login_58_Son.LoginSuccess();
@@ -26,10 +27,11 @@ namespace TestDivuiWebsite
         [TestMethod]
         public void LogoutSuccess()
         {
+            // Lấy tài khoản đăng nhập hiện theo XPath và tiến hành nhấn
             IWebElement profile_58_Son = driver_58_Son.FindElement(By.XPath("//*[@id=\"navbar\"]/ul[2]/li[3]/a"));
             profile_58_Son.Click();
             Thread.Sleep(1000);
-
+            // Lấy nút đăng ký theo XPath và tiến hành nhấn
             IWebElement btnLogout_58_Son = driver_58_Son.FindElement(By.XPath("//a[@href='/logout']"));
             btnLogout_58_Son.Click();
             Thread.Sleep(1000);
@@ -38,6 +40,7 @@ namespace TestDivuiWebsite
         [TestCleanup]
         public void TearDown()
         {
+            // Đóng trình duyệt
             driver_58_Son.Quit();
         }
     }
