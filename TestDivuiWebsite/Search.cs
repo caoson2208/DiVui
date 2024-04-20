@@ -14,130 +14,130 @@ namespace TestDivuiWebsite
     [TestClass]
     public class Search
     {
-        private IWebDriver driver;
-        private string url = "https://divui.com/blog";
-        private ChromeOptions options = new ChromeOptions();
+        private IWebDriver driverThang_63;
+        private string urlThang_63 = "https://divui.com/blog";
+        private ChromeOptions optionsThang_63 = new ChromeOptions();
 
 
         [TestInitialize]
         public void SetUp()
         {
             string chromeDriverPath = "chromedriver.exe";
-            options.AddArgument("--start-maximized");
-            driver = new ChromeDriver(chromeDriverPath, options);
-            driver.Navigate().GoToUrl(url);
+            optionsThang_63.AddArgument("--start-maximized");
+            driverThang_63 = new ChromeDriver(chromeDriverPath, optionsThang_63);
+            driverThang_63.Navigate().GoToUrl(urlThang_63);
         }
 
         [TestMethod]
-        public void checkEmpty()
+        public void checkEmptyThang_63()
         {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
+            IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearchThang_63.Click();
             Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("");
+            IWebElement searchInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search"));
+            searchInputThang_63.Clear();
+            searchInputThang_63.SendKeys("");
             Thread.Sleep(1000);
 
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
+            IWebElement btnInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search-top"));
+            btnInputThang_63.Click();
             Thread.Sleep(5000);
 
-            IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
         [TestMethod]
-        public void checkTextFail()
+        public void checkTextFailThang_63()
         {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
+            IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearchThang_63.Click();
             Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("A@!#*123fd");
+            IWebElement searchInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search"));
+            searchInputThang_63.Clear();
+            searchInputThang_63.SendKeys("A@!#*123fd");
             Thread.Sleep(1000);
 
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
+            IWebElement btnInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search-top"));
+            btnInputThang_63.Click();
             Thread.Sleep(10000);
 
-            IWebElement result = driver.FindElement(By.CssSelector(".no-results>h2"));
-            Assert.IsNotNull(result, "Element message not found. Testcase fail");
-            Assert.AreEqual(result.Text, "No results for your search");
+            IWebElement resultThang_63 = driverThang_63.FindElement(By.CssSelector(".no-results>h2"));
+            Assert.IsNotNull(resultThang_63, "Element message not found. Testcase fail");
+            Assert.AreEqual(resultThang_63.Text, "No results for your search");
 
         }
 
         [TestMethod]
-        public void checkTextSuccess()
+        public void checkTextSuccessThang_63()
         {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
+            IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearchThang_63.Click();
             Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("Biển");
+            IWebElement searchInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search"));
+            searchInputThang_63.Clear();
+            searchInputThang_63.SendKeys("Biển");
             Thread.Sleep(1000);
 
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
+            IWebElement btnInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search-top"));
+            btnInputThang_63.Click();
             Thread.Sleep(5000);
 
-            IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
         [TestMethod]
-        public void checkNumberSuccess()
+        public void checkNumberSuccessThang_63()
         {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
+            IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearchThang_63.Click();
             Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("2018");
+            IWebElement searchInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search"));
+            searchInputThang_63.Clear();
+            searchInputThang_63.SendKeys("2018");
             Thread.Sleep(1000);
 
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
+            IWebElement btnInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search-top"));
+            btnInputThang_63.Click();
             Thread.Sleep(5000);
 
-            IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
         [TestMethod]
-        public void checkSpecialSuccess()
+        public void checkSpecialSuccessThang_63()
         {
-            IWebElement btnSearch = driver.FindElement(By.CssSelector("i.td-icon-search:first-child"));
-            btnSearch.Click();
+            IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
+            btnSearchThang_63.Click();
             Thread.Sleep(1000);
 
-            IWebElement searchInput = driver.FindElement(By.Id("td-header-search"));
-            searchInput.Clear();
-            searchInput.SendKeys("@");
+            IWebElement searchInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search"));
+            searchInputThang_63.Clear();
+            searchInputThang_63.SendKeys("@");
             Thread.Sleep(1000);
 
-            IWebElement btnInput = driver.FindElement(By.Id("td-header-search-top"));
-            btnInput.Click();
+            IWebElement btnInputThang_63 = driverThang_63.FindElement(By.Id("td-header-search-top"));
+            btnInputThang_63.Click();
             Thread.Sleep(5000);
 
-            IList<IWebElement> blogs = driver.FindElements(By.CssSelector(".td_module_16"));
-            Assert.IsTrue(blogs.Count > 0, "No blogs found.");
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
 
 
         [TestCleanup]
-        public void TearDown()
+        public void TearDownThang_63()
         {
-            if (driver != null)
+            if (driverThang_63 != null)
             {
-                driver.Quit();
+                driverThang_63.Quit();
             }
         }
     }

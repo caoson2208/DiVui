@@ -13,161 +13,109 @@ namespace TestDivuiWebsite
     [TestClass]
     public class UpdateUser
     {
-        private static IWebDriver driver;
-        private Login login = new Login();
+        private static IWebDriver driverThang_63;
+        private Login loginThang_63 = new Login();
 
         [TestInitialize]
-        public void SetUp()
+        public void SetUpThang_63()
         {
-            login.SetUp();
-            driver = login.GetDriver();
-            login.LoginSuccess();
+            loginThang_63.SetUp();
+            driverThang_63 = loginThang_63.GetDriver();
+            loginThang_63.LoginSuccess();
+            IWebElement userBtnThang_63 = driverThang_63.FindElement(By.CssSelector("li.dropdown:nth-child(3)"));
+            userBtnThang_63.Click();
+            Thread.Sleep(1000);
+            IWebElement userCustomThang_63 = driverThang_63.FindElement(By.XPath("//a[@href='/customer/info']"));
+            userCustomThang_63.Click();
+            Thread.Sleep(1000);
         }
 
-        private void ResetUser()
+        private void inputValueThang_63 (string dataFirstNameThang_63,string dataLastNameThang_63,string dataPhoneThang_63 ,string dataEmailThang_63) 
         {
-                string dataFirstName = "Ông";
-                string dataLastName = "Cao Ngọc Sơn";
-                string dataPhone = "";
-                string dataEmail = "testtest123@yopmail.com";
-                IWebElement selectFirstName = driver.FindElement(By.Id("FirstName"));
-                selectFirstName.Click();
-                SelectElement firstNameSelect = new SelectElement(selectFirstName);
-                firstNameSelect.SelectByText(dataFirstName);
-                Thread.Sleep(500);
-                IWebElement inputLastName = driver.FindElement(By.Id("LastName"));
-                inputLastName.Clear();
-                inputLastName.SendKeys(dataLastName);
-                IWebElement inputPhone = driver.FindElement(By.Id("Phone"));
-                inputPhone.Clear();
-                inputPhone.SendKeys(dataPhone);
-                IWebElement inputEmail = driver.FindElement(By.Id("Email"));
-                inputEmail.Clear();
-                inputEmail.SendKeys(dataEmail);
-                Thread.Sleep(1000);
-                IWebElement submitBtn = driver.FindElement(By.CssSelector("input[type=submit]"));
-                submitBtn.Click();
+            IWebElement selectFirstNameThang_63 = driverThang_63.FindElement(By.Id("FirstName"));
+            selectFirstNameThang_63.Click();
+            SelectElement firstNameSelectThang_63 = new SelectElement(selectFirstNameThang_63);
+            firstNameSelectThang_63.SelectByText(dataFirstNameThang_63);
+            Thread.Sleep(500);
+            IWebElement inputLastNameThang_63 = driverThang_63.FindElement(By.Id("LastName"));
+            inputLastNameThang_63.Clear();
+            inputLastNameThang_63.SendKeys(dataLastNameThang_63);
+            IWebElement inputPhoneThang_63 = driverThang_63.FindElement(By.Id("Phone"));
+            inputPhoneThang_63.Clear();
+            inputPhoneThang_63.SendKeys(dataPhoneThang_63);
+            IWebElement inputEmailThang_63 = driverThang_63.FindElement(By.Id("Email"));
+            inputEmailThang_63.Clear();
+            inputEmailThang_63.SendKeys(dataEmailThang_63);
+            Thread.Sleep(1000);
+            IWebElement submitBtnThang_63 = driverThang_63.FindElement(By.CssSelector("input[type=submit]"));
+            submitBtnThang_63.Click();
+        }
+
+        private void ResetUserThang_63()
+        {
+                string dataFirstNameThang_63 = "Ông";
+                string dataLastNameThang_63 = "Cao Ngọc Sơn";
+                string dataPhoneThang_63 = "";
+                string dataEmailThang_63 = "testtest123@yopmail.com";
+                inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
         }
 
         [TestMethod]
-        public void updateUserSuccess()
+        public void updateUserSuccessThang_63()
         {
-            string dataFirstName = "Bà";
-            string dataLastName = "Đặng Trung Thắng";
-            string dataPhone = "0385998378";
-            string dataEmail = "thangdt61203@gmail.com";
-            IWebElement userBtn = driver.FindElement(By.CssSelector("li.dropdown:nth-child(3)"));
-            userBtn.Click();
-            Thread.Sleep(1000);
-            IWebElement userCustom = driver.FindElement(By.XPath("//a[@href='/customer/info']"));
-            userCustom.Click();
-            Thread.Sleep(1000);
-            IWebElement selectFirstName = driver.FindElement(By.Id("FirstName"));
-            selectFirstName.Click();
-            SelectElement firstNameSelect = new SelectElement(selectFirstName);
-            firstNameSelect.SelectByText(dataFirstName);
-            Thread.Sleep(500);
-            IWebElement inputLastName = driver.FindElement(By.Id("LastName"));
-            inputLastName.Clear();
-            inputLastName.SendKeys(dataLastName);
-            IWebElement inputPhone = driver.FindElement(By.Id("Phone"));
-            inputPhone.Clear();
-            inputPhone.SendKeys(dataPhone);
-            IWebElement inputEmail = driver.FindElement(By.Id("Email"));
-            inputEmail.Clear();
-            inputEmail.SendKeys(dataEmail);
-            Thread.Sleep(1000);
-            IWebElement submitBtn = driver.FindElement(By.CssSelector("input[type=submit]"));
-            submitBtn.Click();
+            string dataFirstNameThang_63 = "Bà";
+            string dataLastNameThang_63 = "Đặng Trung Thắng";
+            string dataPhoneThang_63 = "0385998378";
+            string dataEmailThang_63 = "thangdt61203@gmail.com";
+            inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
 
-            selectFirstName = driver.FindElement(By.Id("FirstName"));
-            firstNameSelect = new SelectElement(selectFirstName);
-            Assert.AreEqual(dataFirstName, firstNameSelect.SelectedOption.GetAttribute("innerText"));
-            inputLastName = driver.FindElement(By.Id("LastName"));
-            Assert.AreEqual(dataLastName, inputLastName.GetAttribute("value"));
-            inputEmail = driver.FindElement(By.Id("Email"));
-            Assert.AreEqual(dataEmail, inputEmail.GetAttribute("value"));
-            inputPhone = driver.FindElement(By.Id("Phone"));
-            Assert.AreEqual(dataPhone, inputPhone.GetAttribute("value"));
+
+            IWebElement selectFirstNameThang_63 = driverThang_63.FindElement(By.Id("FirstName"));
+            SelectElement firstNameSelectThang_63 = new SelectElement(selectFirstNameThang_63);
+            Assert.AreEqual(dataFirstNameThang_63, firstNameSelectThang_63.SelectedOption.GetAttribute("innerText"));
+            IWebElement inputLastNameThang_63 = driverThang_63.FindElement(By.Id("LastName"));
+            Assert.AreEqual(dataLastNameThang_63, inputLastNameThang_63.GetAttribute("value"));
+            IWebElement inputEmailThang_63 = driverThang_63.FindElement(By.Id("Email"));
+            Assert.AreEqual(dataEmailThang_63, inputEmailThang_63.GetAttribute("value"));
+            IWebElement inputPhoneThang_63 = driverThang_63.FindElement(By.Id("Phone"));
+            Assert.AreEqual(dataPhoneThang_63, inputPhoneThang_63.GetAttribute("value"));
         }
 
         [TestMethod]
-        public void updatePhoneInvalid()
+        public void updatePhoneInvalidThang_63()
         {
-            string dataFirstName = "Bà";
-            string dataLastName = "Đặng Trung Thắng";
-            string dataPhone = "123";
-            string dataEmail = "thangdt61203@gmail.com";
-            IWebElement userBtn = driver.FindElement(By.CssSelector("li.dropdown:nth-child(3)"));
-            userBtn.Click();
-            Thread.Sleep(1000);
-            IWebElement userCustom = driver.FindElement(By.XPath("//a[@href='/customer/info']"));
-            userCustom.Click();
-            Thread.Sleep(1000);
-            IWebElement selectFirstName = driver.FindElement(By.Id("FirstName"));
-            selectFirstName.Click();
-            SelectElement firstNameSelect = new SelectElement(selectFirstName);
-            firstNameSelect.SelectByText(dataFirstName);
-            Thread.Sleep(500);
-            IWebElement inputLastName = driver.FindElement(By.Id("LastName"));
-            inputLastName.Clear();
-            inputLastName.SendKeys(dataLastName);
-            IWebElement inputPhone = driver.FindElement(By.Id("Phone"));
-            inputPhone.Clear();
-            inputPhone.SendKeys(dataPhone);
-            IWebElement inputEmail = driver.FindElement(By.Id("Email"));
-            inputEmail.Clear();
-            inputEmail.SendKeys(dataEmail);
-            Thread.Sleep(1000);
-            IWebElement submitBtn = driver.FindElement(By.CssSelector("input[type=submit]"));
-            submitBtn.Click();
-            Thread.Sleep(1000);
-            IWebElement erorr = driver.FindElement(By.CssSelector("span.field-validation-error>span"));
-            Assert.IsNotNull(erorr, "Error message not found, Test Case fail ");
+            string dataFirstNameThang_63 = "Bà";
+            string dataLastNameThang_63 = "Đặng Trung Thắng";
+            string dataPhoneThang_63 = "123";
+            string dataEmailThang_63 = "thangdt61203@gmail.com";
+
+            inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
+
+            IWebElement erorrThang_63 = driverThang_63.FindElement(By.CssSelector("span.field-validation-error>span"));
+            Assert.IsNotNull(erorrThang_63, "Error message not found, Test Case fail ");
         }
 
         [TestMethod]
-        public void updateEmailInvalid()
+        public void updateEmailInvalidThang_63()
         {
-            string dataFirstName = "Bà";
-            string dataLastName = "Đặng Trung Thắng";
-            string dataPhone = "0385998378";
-            string dataEmail = "thangdt61203@gmail";
-            IWebElement userBtn = driver.FindElement(By.CssSelector("li.dropdown:nth-child(3)"));
-            userBtn.Click();
-            Thread.Sleep(1000);
-            IWebElement userCustom = driver.FindElement(By.XPath("//a[@href='/customer/info']"));
-            userCustom.Click();
-            Thread.Sleep(1000);
-            IWebElement selectFirstName = driver.FindElement(By.Id("FirstName"));
-            selectFirstName.Click();
-            SelectElement firstNameSelect = new SelectElement(selectFirstName);
-            firstNameSelect.SelectByText(dataFirstName);
-            Thread.Sleep(500);
-            IWebElement inputLastName = driver.FindElement(By.Id("LastName"));
-            inputLastName.Clear();
-            inputLastName.SendKeys(dataLastName);
-            IWebElement inputPhone = driver.FindElement(By.Id("Phone"));
-            inputPhone.Clear();
-            inputPhone.SendKeys(dataPhone);
-            IWebElement inputEmail = driver.FindElement(By.Id("Email"));
-            inputEmail.Clear();
-            inputEmail.SendKeys(dataEmail);
-            Thread.Sleep(1000);
-            IWebElement submitBtn = driver.FindElement(By.CssSelector("input[type=submit]"));
-            submitBtn.Click();
+            string dataFirstNameThang_63 = "Bà";
+            string dataLastNameThang_63 = "Đặng Trung Thắng";
+            string dataPhoneThang_63 = "0385998378";
+            string dataEmailThang_63 = "thangdt61203@gmail";
 
-            IWebElement erorr = driver.FindElement(By.CssSelector("span.field-validation-error>span"));
-            Assert.IsNotNull(erorr, "Error message not found, Test Case fail ");
+            inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
+
+            IWebElement erorrThang_63 = driverThang_63.FindElement(By.CssSelector("span.field-validation-error>span"));
+            Assert.IsNotNull(erorrThang_63, "Error message not found, Test Case fail ");
         }
 
         [TestCleanup]
-        public void TearDown()
+        public void TearDownThang_63()
         {
-            if (driver != null)
+            if (driverThang_63 != null)
             {
-                ResetUser();
-                driver.Quit();
+                ResetUserThang_63();
+                driverThang_63.Quit();
             }
         }
     }
