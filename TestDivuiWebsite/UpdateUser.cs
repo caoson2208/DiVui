@@ -1,12 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
 
 namespace TestDivuiWebsite
 {
@@ -88,7 +83,7 @@ namespace TestDivuiWebsite
             string dataFirstNameThang_63 = "Bà";
             string dataLastNameThang_63 = "Đặng Trung Thắng";
             string dataPhoneThang_63 = "0385998378";
-            string dataEmailThang_63 = "thangdt61203@gmail.com";
+            string dataEmailThang_63 = "thangdt061203@gmail.com";
             //Truyền dữ liệu vào hàm cập nhật thông tin đã viết bên trên để tiến hành cập nhật 
             inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
 
@@ -114,7 +109,7 @@ namespace TestDivuiWebsite
             string dataLastNameThang_63 = "Đặng Trung Thắng";
             //Dữ liệu phone truyền vào được viết sai định dạng 
             string dataPhoneThang_63 = "123dd";
-            string dataEmailThang_63 = "thangdt61203@gmail.com";
+            string dataEmailThang_63 = "thangdt061203@gmail.com";
             //Truyền dữ liệu vào hàm cập nhật thông tin đã viết bên trên để tiến hành cập nhật 
             inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
 
@@ -133,7 +128,7 @@ namespace TestDivuiWebsite
             string dataLastNameThang_63 = "Đặng Trung Thắng";
             string dataPhoneThang_63 = "0385998378";
             //Dữ liệu email truyền vào được viết sai định dạng
-            string dataEmailThang_63 = "thangdt61203@gmail";
+            string dataEmailThang_63 = "thangdt061203@gmail";
             //Truyền dữ liệu vào hàm cập nhật thông tin đã viết bên trên để tiến hành cập nhật 
             inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
             

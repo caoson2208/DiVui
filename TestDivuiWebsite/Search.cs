@@ -1,9 +1,7 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Chrome;
 using OpenQA.Selenium;
-using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Threading;
 
 namespace TestDivuiWebsite
