@@ -24,7 +24,7 @@ namespace TestDivuiWebsite
             loginThang_63.LoginSuccess();
             //Lấy element dropdown của biểu tượng tài khoản để hiển thị các chức năng của tài khoản 
             IWebElement userBtnThang_63 = driverThang_63.FindElement(By.CssSelector("li.dropdown:nth-child(3)"));
-            //Tính hành tương tác với element
+            //Tíến hành tương tác với element
             userBtnThang_63.Click();
             Thread.Sleep(1000);
 
@@ -70,7 +70,7 @@ namespace TestDivuiWebsite
                 string dataFirstNameThang_63 = "Ông";
                 string dataLastNameThang_63 = "Cao Ngọc Sơn";
                 string dataPhoneThang_63 = "";
-                string dataEmailThang_63 = "testtest123@yopmail.com";
+                string dataEmailThang_63 = "testtest25@yopmail.com";
             //Truyền dữ liệu vào hàm cập nhật thông tin đã viết bên trên để tiến hành cập nhật 
                 inputValueThang_63(dataFirstNameThang_63, dataLastNameThang_63, dataPhoneThang_63, dataEmailThang_63);
         }

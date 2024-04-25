@@ -41,7 +41,7 @@ namespace TestDivuiWebsite
         [TestMethod]
         public void checkEmptyThang_63()
         {
-            //Tìm element biểu tượng tìm kím và tiến hành nhấn để hiển thị ô input của tìm kiếm
+            //Tìm element biểu tượng tìm kiếm và tiến hành nhấn để hiển thị ô input của tìm kiếm
             IWebElement btnSearchThang_63 = driverThang_63.FindElement(By.CssSelector("i.td-icon-search:first-child"));
             btnSearchThang_63.Click();
             Thread.Sleep(1000);
@@ -58,12 +58,13 @@ namespace TestDivuiWebsite
             btnInputThang_63.Click();
             Thread.Sleep(5000);
 
-            //Láy danh sách các element blog bằng Class 
-            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            //Lấy   danh sách các element blog bằng Class 
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.ClassName("td_module_16"));
             //Kiểm tra danh sách trên có nhiều hơn 0 hay không nêú hơn thì blog đã được tìm kiếm và ngược lại 
             Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
+        //Phương thức này kiểm tra tìm kiếm với giá trị không tồn tại 
         [TestMethod]
         public void checkTextFailThang_63()
         {
@@ -91,11 +92,12 @@ namespace TestDivuiWebsite
             //Kiểm tra nội dung thông báo
             Assert.AreEqual(resultThang_63.Text, "No results for your search");
             //Lấy danh sách các element blog bằng Class 
-            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.ClassName("td_module_16"));
             //Kiểm tra danh sách trên có bằng 0 hay không nêú hơn thì blog đã được tìm kiếm và ngược lại 
-            Assert.IsTrue(blogsThang_63.Count == 0, "No blogs found.");
+            Assert.IsTrue(blogsThang_63.Count == 0, "Blogs found.");
         }
 
+        //Phương thức này kiểm tra tìm kiếm với giá trị chuỗi 
         [TestMethod]
         public void checkTextSuccessThang_63()
         {
@@ -117,12 +119,13 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             //Lấy danh sách các element blog bằng Class 
-            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.ClassName("td_module_16"));
             //Kiểm tra danh sách trên có nhiều hơn 0 hay không nêú hơn thì blog đã được tìm kiếm và ngược lại 
             Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
 
         }
 
+        // Phương thức này kiểm tra tìm kiếm với giá trị số
         [TestMethod]
         public void checkNumberSuccessThang_63()
         {
@@ -144,11 +147,12 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             //Lấy danh sách các element blog bằng Class 
-            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.ClassName("td_module_16"));
             //Kiểm tra danh sách trên có nhiều hơn 0 hay không nêú hơn thì blog đã được tìm kiếm và ngược lại 
             Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
 
+        // Phương thức này kiểm tra tìm kiếm với giá trị đặc biệt
         [TestMethod]
         public void checkSpecialSuccessThang_63()
         {
@@ -170,7 +174,7 @@ namespace TestDivuiWebsite
             Thread.Sleep(5000);
 
             //Lấy danh sách các element blog bằng Class 
-            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.CssSelector(".td_module_16"));
+            IList<IWebElement> blogsThang_63 = driverThang_63.FindElements(By.ClassName("td_module_16"));
             //Kiểm tra danh sách trên có nhiều hơn 0 hay không nêú hơn thì blog đã được tìm kiếm và ngược lại 
             Assert.IsTrue(blogsThang_63.Count > 0, "No blogs found.");
         }
