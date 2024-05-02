@@ -17,10 +17,13 @@ namespace TestDivuiWebsite
     [TestClass]
     public class Cart
     {
-       
+        // Khai báo một biến driver để sử dụng cho việc điều khiển của trình duyệt web
         private static IWebDriver driver_58_Son;
+        // Khai báo một thể hiện của lớp Login đã được viết trước đó để thực hiện việc đăng nhập
         private Login login_58_Son = new Login();
 
+        // Phương thức thiết lập trước mỗi bài kiểm tra (test) để chuẩn bị môi trường và dữ liệu cần thiết
+        //Phương thức này dùng để truy cập vào các bước đầu tiên chung của các test case 
         [TestInitialize]
         public void SetUp()
         {
@@ -30,6 +33,7 @@ namespace TestDivuiWebsite
             login_58_Son.LoginSuccess();
         }
 
+        // Phương thức kiểm tra thêm vào giỏ hàng thành công
         [TestMethod]
         public void AddToCartSuccess()
         {

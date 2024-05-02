@@ -18,7 +18,7 @@ namespace TestDivuiWebsite
         private string url_58_Son = "https://divui.com/";
         private ChromeOptions options_58_Son = new ChromeOptions();
         private string lastname_58_Son = "testest";
-        private string email_58_Son = "testtest25@yopmail.com";
+        private string email_58_Son = "testtest30@yopmail.com";
         private string password_58_Son = "testtest@123";
 
         [TestInitialize]
